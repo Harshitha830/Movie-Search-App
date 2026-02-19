@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🎬 Movie Explorer</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Favorite Movies</h1>
+            <p>Search and explore thousands of movies instantly</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search movies here..." />
+                <button id="searchBtn">🔍 Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section" id="trending">
+        <div class="container">
+            <h2>🔥 Popular Indian Movies</h2>
+            <div class="movies-grid" id="trendingMovies"></div>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="results-section" id="results">
+        <div class="container">
+            <h2 id="resultsTitle"></h2>
+            <div class="loader" id="loader"></div>
+            <div class="error" id="error"></div>
+            <div class="movies-grid" id="moviesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section class="favorites-section" id="favorites">
+        <div class="container">
+            <h2>❤️ My Favorites</h2>
+            <div class="movies-grid" id="favoritesGrid"></div>
+            <p class="empty-message" id="emptyFavorites">No favorites yet. Start adding movies!</p>
+        </div>
+    </section>
+
+    <!-- Movie Details Modal -->
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <img id="modalPoster" src="" alt="Movie Poster">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="rating">⭐ <span id="modalRating"></span></div>
+                    <p class="genre" id="modalGenre"></p>
+                    <div class="details-grid">
+                        <div><strong>Released:</strong> <span id="modalReleased"></span></div>
+                        <div><strong>Runtime:</strong> <span id="modalRuntime"></span></div>
+                        <div><strong>Director:</strong> <span id="modalDirector"></span></div>
+                        <div><strong>Language:</strong> <span id="modalLanguage"></span></div>
+                    </div>
+                    <p class="actors"><strong>Actors:</strong> <span id="modalActors"></span></p>
+                    <p class="plot"><strong>Plot:</strong> <span id="modalPlot"></span></p>
+                    <button class="add-favorite-btn" id="modalFavoriteBtn">❤️ Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Powered by OMDb API | Movie Explorer © 2024</p>
+            <p>Search, Discover, and Save Your Favorite Movies</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
